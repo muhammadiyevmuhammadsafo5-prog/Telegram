@@ -19,6 +19,28 @@ def start_handler(message: types.Message):
         text=f"Assalomu alaykum! {message.from_user.full_name}"
     )
 
+@bot.message_handler(commands=["usd"])
+def usd_handler(message: types.Message):
+    bot.send_message(
+        chat_id=message.chat.id,
+        text=f"1$ - 11800 so'm"
+    )
+
+@bot.message_handler(commands=["rub"])
+def rub_handler(message: types.Message):
+    bot.send_message(
+        chat_id=message.chat.id,
+        text=f"1RUB - 149,19 so'm"
+    )
+
+
+@bot.message_handler(commands=["owner"])
+def owner_handler(message: types.Message):
+    bot.send_message(
+        chat_id=message.chat.id,
+        text="👨‍💻 Создатель бота: https://t.me/Belling5am"
+    )
+
 
 if __name__ == "__main__":
     print("Bot ishga tushdi")
